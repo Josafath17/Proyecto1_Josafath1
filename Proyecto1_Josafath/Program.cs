@@ -68,6 +68,7 @@ namespace Ejemplo_menu
                         case 1:
                             Console.WriteLine("Has elegido la opción 1");
                             menuUsuario();
+
                             break;
 
                         case 2:
@@ -84,6 +85,7 @@ namespace Ejemplo_menu
                     }
 
                 }
+
                 catch (FormatException e)
                 {
                     Console.WriteLine(e.Message);
@@ -98,21 +100,70 @@ namespace Ejemplo_menu
             switch (opcion)
             {
                 case 1:
+                   
                     Console.WriteLine("1.Ruta");
                     menuRutas();
+
+                    Console.WriteLine("Identificar la ruta: ");
+                    identificador = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Identificar El nombre de la ruta: ");
+                    nombre = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Decriba La ruta ");
+                    descripcion = int.Parse(Console.ReadLine());
                     break;
 
                 case 2:
                     Console.WriteLine("2.Terminal");
                     menuTerminales();
+
+                    Console.WriteLine("Codigo de la terminal ");
+                    codigoTerminal = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Numero de la terminal");
+                    nombreTerminal = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Numero de la ubicacion de la terminal");
+                    ubicacionTerminal = int.Parse(Console.ReadLine());
                     break;
                 case 3:
                     Console.WriteLine("3.Unidad");
                     menuUnidades();
+                    
+                    Console.WriteLine("Digite la Unidad");
+                    codigoUnidad = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Numero de placa del Autobus");
+                    numeroPlaca; = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Numero del motor del Autobus");
+                    numeroMotor = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Modelo del autobus");
+                    Modelo = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Capacidad de pasajeros");
+                    Capacidad = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Color del Autobus");
+                    Color = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Ruta Asignada");
+                    rutaAsignada = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Numero de permiso de transito");
+                    numeroPermisoTransito = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Fecha de vigencia");
+                    fechaVigencia = int.Parse(Console.ReadLine());
+
                     break;
                 case 4:
                     Console.WriteLine("4.Horario");
                     menuHorarios();
+                    Console.WriteLine("Identifique el Horario");
+                    identificadorHorario = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Identifique la ruta");
+                    identificadorRuta = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Identifique la terminal");
+                    identificadorTeminal = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Dia de la semana(Lunes -Domingo)");
+                    dia = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Identifique la hora de Salida en la terminal");
+                    horaSalida = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Identifique la hora de llegada al destino");
+                    horaLlegada = int.Parse(Console.ReadLine());
                     break;
                 default:
                     Console.WriteLine("Elige una opcion entre 1 y 4");
@@ -341,6 +392,64 @@ namespace Ejemplo_menu
             }
 
         }
-        
+        public static void menuVentas()
+        {
+            Console.WriteLine("1. Opción 1: Vender Tiquete Nacional");
+            Console.WriteLine("2. Opción 2: Vender Tiquete internacional");
+            Console.WriteLine("3. Salir");
+            Console.WriteLine("Elige una de las opciones");
+            int opcion = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("1.Vender Tiquete nacional");
+                    menuRutas();
+
+                    Console.WriteLine("Hora del viaje que desea: ");
+                    DateTime = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Cantidad de personas que van: ");
+                    Cantidadpersonas = int.Parse(Console.ReadLine());
+
+
+
+                    break;
+
+                case 2:
+                    Console.WriteLine("2.Vender Tiquete internacional");
+                    menuRutas();
+
+                    Console.WriteLine("Numero de Pasaporte: ");
+                    pasaporte = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Nombre del pasajero: ");
+                    nombrepasajero = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Vigencia del pasaporte: ");
+                    vigencia = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Fecha del viaje: ");
+                    fechaViaje = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Fecha de regreso del viaje: ");
+                    fecharegreso = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Motivo del viaje: ");
+                    motivoviaje = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Hora de salida: ");
+                    holaSalida = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Lugar de donde sale el bus: ");
+                    lugarSalida = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Hacia donde se Dirige?: ");
+                    destino = int.Parse(Console.ReadLine());
+
+
+                    break;
+
+
+                default:
+                    Console.WriteLine("Elige una opcion entre 1 y 3");
+                    break;
+            }
+
+        }
+
     }
 }

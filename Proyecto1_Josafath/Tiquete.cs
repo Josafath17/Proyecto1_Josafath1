@@ -17,7 +17,13 @@ namespace Proyecto1_Josafath.Usuario
         public bool equipaje;
         public int numeroEquipaje;
 
-        public Tiquete(int numeroTiquete,DateTime fechaViaje, int numeroAsiento, DateTime horaSalida, String lugarSalida, String destino,bool equipaje,int numeroEquipaje)
+        public String nombrepasajero;
+        public int pasaporte;
+        public DateTime vigencia;
+        public DateTime fecharegreso;
+        public String motivoviaje;
+
+        public Tiquete(int numeroTiquete,DateTime fechaViaje, int numeroAsiento, DateTime horaSalida, String lugarSalida, String destino,bool equipaje,int numeroEquipaje,String nombrepasajero, int pasaporte ,DateTime vigencia, DateTime fecharegreso, string motivoviaje)
         {
             numeroTiquete = numeroTiquete;
             fechaViaje = fechaViaje;
@@ -27,7 +33,15 @@ namespace Proyecto1_Josafath.Usuario
             destino = destino;
             equipaje = equipaje;
             numeroEquipaje = numeroEquipaje;
+
+            nombrepasajero = nombrepasajero;
+            pasaporte = pasaporte;
+            vigencia = vigencia;
+            fecharegreso = fecharegreso;
+            motivoviaje = motivoviaje;
+
         }
+
 
         public void setNumeroTiquete(int numeroTiquete)
         {
@@ -140,6 +154,9 @@ namespace Proyecto1_Josafath.Usuario
             }
 
         }
+
+
+
 
 
 

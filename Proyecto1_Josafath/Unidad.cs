@@ -58,6 +58,7 @@ namespace Proyecto1_Josafath.Administrador
             Color = color;
         }
 
+
         public void setRutaAsignada(int rutita)
         {
             rutaAsignada = rutita;
